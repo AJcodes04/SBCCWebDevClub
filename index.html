@@ -35,14 +35,21 @@
             overflow: hidden;
             position: relative;
             height: 75px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            animation: scroll-left 10s linear infinite;
         }
 
         .footer-content {
-            display: inline-block;
-            padding-top: 10px;
-            white-space: nowrap;
-            position: absolute;
-            animation: scroll-left 12s linear infinite;
+            display: flex;
+            align-items: center;
         }
 
         .footer img {
@@ -52,13 +59,17 @@
 
         @keyframes scroll-left {
             0% {
-                transform: translateX(100%);
+                transform: translateX(0%);
             }
+
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
         }
 
+        .text-left {
+            text-align: left;
+        }
     </style>
 </head>
 
@@ -69,18 +80,17 @@
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="./background-images/Vaquero.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="1000"
-                        height="30hv" loading="lazy">
+                    <img src="./background-images/Vaquero.png" class="d-block mx-lg-auto img-fluid"
+                        alt="Bootstrap Themes" width="1000" height="30hv" loading="lazy">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-2 fw-bold text-whit lh-1 mb-3 ">SBCC Web Development Club</h1>
-                    <h3 class="lead text-whit">A club where SBCC students can learn and build websites. No worries if
-                        you
-                        don't know how to code. Join workshops or simply contribute by sharing website ideas that
-                        benefit
-                        the SBCC community.</h3>
+                    <h1 class="display-2 fw-bold text-whit lh-1 mb-3 text-left">SBCC Web Development Club</h1>
+                    <h3 class="lead text-whit text-left">A club where SBCC students can learn and build websites. No
+                        worries if
+                        you don't know how to code. Join workshops or simply contribute by sharing website ideas that
+                        benefit the SBCC community.</h3>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        
+
                     </div>
                 </div>
             </div>
@@ -88,43 +98,48 @@
     </section>
 
     <!-- Features -->
-    <section id="features" class="text-center py-5">
-
-        <div class="container px-4 py-5" id="hanging-icons">
-            <h2 class="pb-2 border-bottom display-4 fw-bold">Code with the SBCC Community</h2>
+    <section id="features" class="py-5">
+        <div class="container col-xxl-8 px-4 py-5" id="hanging-icons">
+            <h2 class="pb-2 border-bottom display-4 fw-bold text-left">Code with the SBCC Community</h2>
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div class="col d-flex align-items-start">
+                <div class="col d-flex align-items-start text-left">
                     <div
                         class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                         <img src="./svg/who.svg">
                     </div>
                     <div>
-                        <h3 class="fs-2 text-body-emphasis">Who are we?</h3>
-                        <p>SBCC students who see the potential in making websites that can help SBCC students. From study tools to event and social
-                        websites meant for students, the goal of the club is serve the SBCC community with our innovations.</p>
-                        
+                        <h3 class="fs-2 text-body-emphasis text-left">Who are we?</h3>
+                        <p>SBCC students who see the potential in making websites that can help SBCC students. From
+                            study tools to event and social
+                            websites meant for students, the goal of the club is serve the SBCC community with our
+                            innovations.</p>
+
                     </div>
                 </div>
-                <div class="col d-flex align-items-start">
+                <div class="col d-flex align-items-start text-left">
                     <div
                         class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                         <img src="./svg/offer.svg">
                     </div>
                     <div>
-                        <h3 class="fs-2 text-body-emphasis">What we will offer?</h3>
-                        <p>We will have workshops that teach almost everything about web development and system design, from basics to industry-standard technologies. Connect with like-minded peers and professionals, expanding your network in the tech industry.</p>
-                        
+                        <h3 class="fs-2 text-body-emphasis text-left">What we will offer?</h3>
+                        <p>We will have workshops that teach almost everything about web development and system design,
+                            from basics to industry-standard technologies. Connect with like-minded peers and
+                            professionals, expanding your network in the tech industry.</p>
+
                     </div>
                 </div>
-                <div class="col d-flex align-items-start">
+                <div class="col d-flex align-items-start text-left">
                     <div
                         class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                         <img src="./svg/people.svg">
                     </div>
                     <div>
-                        <h3 class="fs-2 text-body-emphasis">Why you should join</h3>
-                        <p>Gain hands-on experience with web development, system design, and modern technologies. Work on real-world projects that you can showcase to potential employers. Develop your ability to work effectively in a team setting, mimicking real-world job scenarios.</p>
-                        
+                        <h3 class="fs-2 text-body-emphasis text-left">Why you should join</h3>
+                        <p>Gain hands-on experience with web development, system design, and modern technologies. Work
+                            on real-world projects that you can showcase to potential employers. Develop your ability to
+                            work effectively in a team setting, mimicking real-world job scenarios.</p>
+
                     </div>
                 </div>
             </div>
@@ -134,60 +149,78 @@
     <!-- Sign up -->
 
     <section id="sign-up" class="gradient-background-2">
-        <div class="container col-xl-10 col-xxl-8 px-4 py5-">
+        <div class="container col-xxl-8 px-4 py-5">
             <div class="row align-items-center g-lg-5 py-5">
                 <div class="col-lg-7 text-center text-lg-start">
-                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Join us now!</h1>
-                    <p class="col-lg-10 fs-4">Make sure to register your email for us to get an official list of the clubs roster. Join our discord below!</p>
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><img src="../svg/discord.svg" height="22">
-                            Discord</button>
+                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3 text-left">Join us now!</h1>
+                    <p class="col-lg-10 fs-4 text-left">Make sure to register your email for us to get an official list
+                        of the clubs roster. Join our discord below!</p>
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><img src="./svg/discord.svg"
+                            height="22">
+                        Discord</button>
                 </div>
                 <div class="col-md-10 mx-auto col-lg-5">
                     <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-                        <h3 class="text-center mb-4">I want to be a</h2>
+                        <h3 class="text-center mb-4 text-left">I want to be a</h3>
                         <div class="d-flex mb-4">
                             <button type="button" class="btn btn-pink w-50 me-2">Member</button>
                             <button type="button" class="btn btn-secondary w-50">Officer</button>
                         </div>
-                        <div class="form-floating mb-3">
+                        <div class="form-floating mb-3 text-left">
                             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">youremail@pipeline.sbcc.edu</label>
                         </div>
-                        
+
                         <div class="checkbox mb-3">
-                            
+
                         </div>
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
                         <hr class="my-4">
-                        <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+                        <small class="text-body-secondary text-left">By clicking Sign up, you agree to the terms of
+                            use.</small>
                     </form>
                 </div>
             </div>
-            
         </div>
     </section>
+
     <!-- Footer -->
     <section id="footer">
         <footer class="footer">
-            <div class="footer-content">
-                <img src="./footers/express.png" alt="Logo 3">
-                <img src="./footers/jquery.png" alt="Logo 3">
-                <img src="./footers/sql.png" alt="Logo 4">
-                <img src="./footers/nodejs.png" alt="Logo 2">
-                <img src="./footers/bootstrap.png" alt="Logo 5">
-                <img src="./footers/js.png" alt="Logo 6">
-                <img src="./footers/html.png" alt="Logo 1">
-                <img src="./footers/css.png" alt="Logo 2">
-                <img src="./footers/react.png" alt="Logo 2">
-                <img src="./footers/gitblack.png" alt="Logo 2">
-                <span>© 2024 SBCC Web Development Club.</span>
+            <div class="footer-content-wrapper">
+                <div class="footer-content">
+                    <img src="./footers/express.png" alt="Logo 3">
+                    <img src="./footers/jquery.png" alt="Logo 3">
+                    <img src="./footers/sql.png" alt="Logo 4">
+                    <img src="./footers/nodejs.png" alt="Logo 2">
+                    <img src="./footers/bootstrap.png" alt="Logo 5">
+                    <img src="./footers/js.png" alt="Logo 6">
+                    <img src="./footers/html.png" alt="Logo 1">
+                    <img src="./footers/css.png" alt="Logo 2">
+                    <img src="./footers/react.png" alt="Logo 2">
+                    <img src="./footers/gitblack.png" alt="Logo 2">
+                    <span>© 2024 SBCC Web Development Club.</span>
+                </div>
+                <div class="footer-content">
+                    <img src="./footers/express.png" alt="Logo 3">
+                    <img src="./footers/jquery.png" alt="Logo 3">
+                    <img src="./footers/sql.png" alt="Logo 4">
+                    <img src="./footers/nodejs.png" alt="Logo 2">
+                    <img src="./footers/bootstrap.png" alt="Logo 5">
+                    <img src="./footers/js.png" alt="Logo 6">
+                    <img src="./footers/html.png" alt="Logo 1">
+                    <img src="./footers/css.png" alt="Logo 2">
+                    <img src="./footers/react.png" alt="Logo 2">
+                    <img src="./footers/gitblack.png" alt="Logo 2">
+                    <span>© 2024 SBCC Web Development Club.</span>
+                </div>
             </div>
         </footer>
     </section>
 
     <!-- Bootstrap JavaScript bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous"></script>
 </body>
 
